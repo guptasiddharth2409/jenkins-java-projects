@@ -10,6 +10,9 @@
 	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
+
+		 <maven.compiler.source>17</maven.compiler.source>
+                 <maven.compiler.target>17</maven.compiler.target>
 	</properties>	
 	<dependencies>
 		<dependency>
@@ -45,7 +48,19 @@
 		<name>Maven.org</name>
 		<url>http://repo1.maven.org/maven2</url>
 	    </pluginRepository>
-	</pluginRepositories>
+    </pluginRepositories>
+
+    <build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+
+    </plugins>
+</build>
 
 	
 </project>
